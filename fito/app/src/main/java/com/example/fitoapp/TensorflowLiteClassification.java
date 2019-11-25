@@ -175,11 +175,11 @@ public class TensorflowLiteClassification {
     }
 
     public static int getImageSizeX() {
-        return 160;
+        return 224;
     }
 
     public static int getImageSizeY() {
-        return 160;
+        return 224;
     }
 
     /** Preallocated buffers for storing image data in. */
@@ -189,11 +189,11 @@ public class TensorflowLiteClassification {
         // you can download this file from
         // see build.gradle for where to obtain this file. It should be auto
         // downloaded into assets.
-        return "flower_MobileNetV2_01.tflite";
+        return "DenseNet_trigo_croped_87.tflite";
     }
 
     protected String getLabelPath() {
-        return "flower_labels.txt";
+        return "trigo_labels.txt";
     }
 
     protected float getNormalizedProbability(int labelIndex) {
@@ -261,9 +261,9 @@ public class TensorflowLiteClassification {
         @Override
         public String toString() {
             String resultString = "";
-            if (id != null) {
+            /*if (id != null) {
                 resultString += "[" + id + "] ";
-            }
+            }*/
 
             if (title != null) {
                 resultString += title + " ";
